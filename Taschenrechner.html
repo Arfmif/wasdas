@@ -55,6 +55,16 @@
 				}
 				document.getElementById("result").innerHTML = factorial;
 			}
+			function celsiusToFahrenheit() {
+				var celsius = parseFloat(document.getElementById('num1').value);
+				var fahrenheit = (celsius * 9/5) + 32;
+				document.getElementById("result").innerHTML = fahrenheit + " °F";
+			}
+			function fahrenheitToCelsius() {
+				var fahrenheit = parseFloat(document.getElementById('num1').value);
+				var celsius = (fahrenheit - 32) * 5/9;
+				document.getElementById("result").innerHTML = celsius + " °C";
+			}
 		</script>
 	</head>
 	<body>
@@ -74,6 +84,8 @@
 		<button onclick="sqrtNumber()">&#8730;</button>
 		<button onclick="logNumber()">Log</button>
 		<button onclick="factNumber()">!</button>
+		<button onclick="celsiusToFahrenheit()">C to F</button>
+		<button onclick="fahrenheitToCelsius()">F to C</button>
 		<p id="result"></p>
 	</body>
 </html>
